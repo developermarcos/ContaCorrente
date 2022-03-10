@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ContaCorrente.ConsoleApp.ContaCorrente">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAgAABAAAACAAAAAAIAAEAEAAACAMAAAACAAA=</HashCode>
+      <FileName>ContaCorrente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="movimentacoes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ContaCorrente.ConsoleApp.Movimentacao">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Movimentacao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="tipos" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="ContaCorrente.ConsoleApp.Tipos">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tipos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
