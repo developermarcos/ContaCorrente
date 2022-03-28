@@ -11,11 +11,21 @@ namespace ContaCorrente.ConsoleApp
     {
         public int numero;
         public bool ehEspecial;
-        public decimal limite;
-        public decimal saldo;
-        public Movimentacao[] movimentacoes;
+        private decimal limite;
+        private decimal saldo;
+        public Cliente cliente;
+        private Movimentacao[] movimentacoes;
         
-        
+        public ContaCorrente(int numero, bool especial, decimal limite, decimal saldo, Cliente cliente, Movimentacao[] movimentacaos)
+        {
+            this.numero = numero;
+            this.ehEspecial = especial;
+            this.limite = limite;
+            this.saldo = saldo;
+            this.movimentacoes = movimentacaos;
+            this.cliente = cliente;
+        }
+
         public bool Sacar(decimal valor)
         {
             bool saqueRealizado = false;
@@ -39,6 +49,7 @@ namespace ContaCorrente.ConsoleApp
 
             return saqueRealizado;
         }
+
         public void Depositar(decimal valorDeposito)
         {
             int posicao = PosicaoParaInserirMovimentacao();
@@ -53,6 +64,7 @@ namespace ContaCorrente.ConsoleApp
             else
                 Console.WriteLine("Não foi possível realizar esta transação");
         }
+
         public bool TransferirPara(ContaCorrente contaFinal, decimal valor)
         {
             bool saqueRealizado = false;
@@ -67,6 +79,7 @@ namespace ContaCorrente.ConsoleApp
 
             return saqueRealizado;
         }
+
         private int PosicaoParaInserirMovimentacao()
         {
             int posicao = -1;// -1 não há posições para registrar movimentacoes
@@ -85,10 +98,12 @@ namespace ContaCorrente.ConsoleApp
             }
             return posicao;
         }
+
         public void Saldo()
         {
             Console.WriteLine("O saldo da conta {0} é de {1}", numero.ToString(), saldo.ToString());
         }
+
         public void Extrato()
         {
             Console.WriteLine("---------------Segue extrato da conta---------------");
